@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0c1e">
+<title>李梦然 · 十九岁生日快乐</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bg-sky"></div>
+<div class="aurora"></div>
+<canvas id="stars"></canvas>
+<div class="dust-layer" id="dustLayer"></div>
+<div class="sparkle-layer" id="sparkleLayer"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<canvas id="confetti"></canvas>
+<div class="wish-layer" id="wishLayer"></div>
+
+<header class="hero">
+  <div class="moon" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <span class="big19" aria-hidden="true">19</span>
+    <span class="happy-en">Happy Birthday</span>
+    <h1>李梦然</h1>
+    <div class="sub">十九岁 · 生日快乐</div>
+    <p class="tiny-quote">十九岁的月光，是一种更幸福的温柔了。<br>愿你始终相信，幸福有重量，也有回响。</p>
+    <div class="date">November 24, 2026</div>
+  </div>
+  <div class="scroll-cue"><span>向下翻阅</span><span class="arrow"></span></div>
+</header>
+
+<section class="cake-section" id="cakeSection">
+  <div class="wrap">
+    <div class="kicker reveal">Make a Wish</div>
+    <h2 class="sec-title reveal">为你点亮十九盏微光</h2>
+    <div class="cake-shell reveal" id="cakeShell">
+      <div class="cake-canvas" id="cakeCanvas"></div>
+      <div class="cake-badge">十九岁</div>
+      <div class="cake-tip">拖动旋转 · 轻点许愿</div>
+    </div>
+    <div class="cake-hint" id="cakeHint">✦ 点一下蛋糕，或者在下面写一句想说的话 ✦</div>
+    <form class="wish-form reveal" id="wishForm">
+      <input id="wishInput" type="text" maxlength="50" autocomplete="off" placeholder="写下你的愿望，让它飘满星空…" aria-label="写下愿望">
+      <button type="submit">放飞愿望 ✦</button>
+    </form>
+    <div class="wish-msg" id="wishMsg">愿望已经悄悄收好啦 ✨<br>愿它在这个秋天，慢慢长出翅膀</div>
+  </div>
+</section>
+
+<section class="memories-section">
+  <div class="wrap">
+    <div class="kicker reveal">Pieces of You</div>
+    <div class="scrapbook" id="scrapbook">
+      <div class="paper-note note-a reveal">梦然的十九岁<br>要一直闪闪发光呀 ✦</div>
+      <div class="paper-note note-b reveal">把喜欢的瞬间<br>都贴在今晚的星空里</div>
+      <div class="tape tape-1" aria-hidden="true"></div>
+      <div class="tape tape-2" aria-hidden="true"></div>
+      <div class="tape tape-3" aria-hidden="true"></div>
+      <div class="tape tape-4" aria-hidden="true"></div>
+      <div class="tape tape-5" aria-hidden="true"></div>
+      <div class="tape tape-6" aria-hidden="true"></div>
+      <div class="photo-card reveal" style="--x:5%;--y:2%;--rot:-7deg;--delay:0s"><span class="pin"></span><img src="photos/1.jpg" alt="梦然的照片一"></div>
+      <div class="photo-card reveal" style="--x:37%;--y:8%;--rot:5deg;--delay:.5s"><span class="pin"></span><img src="photos/2.jpg" alt="梦然的照片二"></div>
+      <div class="photo-card reveal" style="--x:70%;--y:1%;--rot:-4deg;--delay:1s"><span class="pin"></span><img src="photos/3.jpg" alt="梦然的照片三"></div>
+      <div class="photo-card reveal" style="--x:13%;--y:52%;--rot:6deg;--delay:1.5s"><span class="pin"></span><img src="photos/4.jpg" alt="梦然的照片四"></div>
+      <div class="photo-card reveal" style="--x:45%;--y:57%;--rot:-5deg;--delay:2s"><span class="pin"></span><img src="photos/5.jpg" alt="梦然的照片五"></div>
+      <div class="photo-card reveal" style="--x:76%;--y:50%;--rot:4deg;--delay:2.5s"><span class="pin"></span><img src="photos/6.jpg" alt="梦然的照片六"></div>
+      <div class="scribble scribble-1" aria-hidden="true">✦ 要快乐 ✦</div>
+      <div class="scribble scribble-2" aria-hidden="true">♡ forever young ♡</div>
+    </div>
+  </div>
+</section>
+
+<section class="letter-section">
+  <div class="wrap">
+    <div class="kicker reveal">A Letter For You</div>
+    <div class="sec-line reveal"></div>
+    <article class="letter">
+      <div class="letter-tape" aria-hidden="true"></div>
+      <div class="dear reveal">亲爱的梦然：</div>
+      <p class="reveal">十九岁是一个很奇妙的年纪——还保留着少年人的清澈，又开始拥有属于自己的辽阔。你站在两者之间，像一枚刚刚好的月亮，既明亮，也温柔。</p>
+      <div class="quote reveal">十九岁的月光，是一种更幸福的温柔了。<br>不再只是清澈地悬在天上，而是学会了流淌。<br>愿你依然相信<em>幸福的重量</em>——<br>它或许不再轻如蝉翼，却沉实如大地，<br>能稳稳托住所有细腻的心事与悲喜。</div>
+      <p class="reveal">昨天已经消失，今天就在脚下，未来一切未知。在这个寒意料峭的冬天，站在时间的门槛上，一边是黄昏，一边是黎明。希望你未来能积累生命更多的厚度，但愿生活的结束与开始同在，万象更新。</p>
+      <p class="reveal">在古老的观念中，一个人生命的价值，不仅在于其长度，更在于其“厚度”——你激起的爱与涟漪。允许自己慢一点。不必急着长成大人的样子，不必把所有答案都提前写好。十九岁最好的地方，就是你还有大把的时间去试错、去热爱、去成为各种各样的自己。那些还没抵达的地方，那些还没遇见的人，都在未来等你，慢慢走。</p>
+      <p class="reveal">新的一岁，你值得一切美好的事物，不是因为你完美，只是因为你是你。</p>
+      <p class="reveal">生日快乐呀，梦然。愿这一年的月光都为你流淌，愿你幸福，不止今天，而是朝朝暮暮、岁岁年年。</p>
+      <div class="signature reveal">多幸福一点！<br><span>2026 · 11 · 24</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="finale">
+  <div class="stars-row reveal">✦　✧　✦　✧　✦</div>
+  <h2 class="reveal">生日快乐<br><span class="small-line">幸福永存，不息待续</span></h2>
+  <div class="en reveal">Happy 19th Birthday · Mengran</div>
+  <div class="small reveal">愿你所愿，皆如愿以偿</div>
+  <button class="replay-btn reveal" id="replayBtn">✦ 再许一次愿 ✦</button>
+</section>
+
+<audio id="bgm" src="audio/gouai.mp3" loop preload="auto" autoplay></audio>
+<button class="music-btn" id="musicBtn" title="播放《够爱》" aria-label="播放《够爱》">♪</button>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="关闭">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="上一张">‹</button>
+  <img id="lbImg" src="" alt="照片">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="下一张">›</button>
+</div>
+
+<script src="three.min.js"></script>
+<script src="app.js"></script>
+<script src="cake3d.js"></script>
+</body>
+</html>
